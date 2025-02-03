@@ -1,0 +1,533 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    font-size: 80%;
+    color: #333;
+    margin: 0 auto;
+    
+
+}
+        /*\\\\\\\\\\\\\\\head/////////////////*/
+.header {
+    background-image:linear-gradient(to bottom  , rgb(98, 192, 223),#00f8f8);
+    color: white;
+    padding: 20px;
+    margin-left: 0%;
+    margin-right: 0%;
+
+    
+}
+header h1{
+    position: absolute;
+    left: 100px;
+    top: 6px;
+    color: #000000;
+}
+.logo { 
+    width: 70px; /* Adjust the size as needed */ 
+    height: 70px; /* Make height the same as width for a perfect circle */ 
+    border-radius: 50%; /* Circular border */ 
+    position: absolute; left: 20px; /* Distance from the right side */ 
+    border:solid;
+    top: 5px; /* Distance from the top */ 
+    left: 5px;
+}
+/*.navbar{
+    text-align: right;
+}*/
+.navbar a {
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+ul li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+
+}
+
+.navbar i{
+    text-align: center;
+}
+header nav ul li ul li {
+    
+    display: table;
+    padding: 20px 20px;
+    color: #f4f4f4;
+
+}
+#qwerty{
+    float: right;
+    clear: both;
+    position: absolute;
+    background-color: rgb(8, 153, 250);
+    width: 20%;
+    left: 500px;
+}
+#qwerty li{
+    text-align: center;
+}
+ul li ul{
+    position: relative;
+    display: none;
+    z-index: 9;
+    width: 10%;
+    background-color: black; 
+    text-align: center;
+    border-radius: 10%;
+
+}
+ul li:hover #qwerty{
+    display: block;
+    padding: 20px 20px;
+    float: left;
+}
+.www{
+    display: none;
+}
+/*.navbar a:hover {
+    background-color: #073247;
+    color: rgb(255, 255, 255);
+    border-radius: 5%;
+    font-weight: 400;
+}*/
+        /*\\\\\\\\\\\\\ body ////////////////*/
+
+.content {
+    padding: 20px 20px 50px 20px;
+    background-position: center;
+
+    background-image:linear-gradient(to bottom ,#00f8f8,white);
+    
+}
+.text-animation1{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 50%;
+    position: relative;
+    margin: 5% 25%;
+    animation: changeColorAndSize 3s ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes changeColorAndSize {
+    0%  {
+      
+        letter-spacing: 2.5px;
+        translate:0 0;
+        color: rgb(0, 0, 0);
+    }
+    25% {
+        translate: 0 60px;
+        color: rgba(244, 235, 186, 0.858);
+    }
+    100%{
+        color: rgb(0, 0, 0);
+    }
+    
+}
+.text-description {
+    font-size: 30px;
+    color:#000000;
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    position:relative;
+    margin: 90px 40px 250px 40px;
+}
+.text-descriptio{
+    font-size: 30px;
+    color:#000000;
+    padding: 20px 40px 20px 40px;
+    text-align: center;
+    position:relative;
+}
+.text-animation2{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 50%;
+    margin: 5% 25%;
+    animation: anim 3s ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation-delay: 0.2s;
+    animation-play-state: paused;
+}
+@keyframes anim{
+    0%{
+      letter-spacing: 9px;
+      font-size: 35px;
+      opacity:0;
+    }
+    25%{
+        font-size: 38px;
+        opacity: 1;
+    }
+}
+
+.text-animation2:hover{
+    animation-play-state: running;
+}
+    
+
+        /*//////// NEW  MODEL \\\\\\\\\*/
+
+
+
+.card{
+    width: 380px;
+    height: 380px;
+    padding: 2rem 1rem;
+    position: relative;
+    display: flex;
+    align-items: left;
+    justify-content: end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.card:hover{
+    transform: translateY(20px);
+}
+.card::before{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,#7c7c0017,#0bccea76);
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+.card:hover:before{
+    opacity: 1;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: transform 0.5s ease;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+.card .info{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    
+    opacity:0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+.card:hover .info{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.card .info h1{
+    margin: 0;
+}
+.card .info p{
+    letter-spacing:1px;
+    font-size: 15px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.card .info .btn{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    border-radius: 5%;
+
+}
+.main2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.product {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.wrapper{
+    border-radius: 20px;
+}
+        /*//////// </NEW MODEL> \\\\\\\\\*/
+
+
+
+
+
+        /*\\\\\\\\\\\\\\\Footer////////////////*/
+        /*\\\\\\\\\\\\\\\icon insta whatsap////////////////*/
+.footbody{
+    background: transparent;
+    position: relative;
+    
+}
+
+        /*////////whatspp\\\\\\\\\\*/
+
+.footbody1 {
+    color: #fff;
+    text-decoration: none;
+}
+.footbody1  i{
+    font-size: 40px;
+    padding: 5px 7px;
+    margin: 10px 10px 10px 40px;
+    border-radius: 30%;
+}
+.footbody1  i:hover{
+    background: rgba(39, 255, 39, 0.766);
+    transform: scale(1.2);
+    color: rgb(63, 23, 23);
+
+}
+        /*////////instagram\\\\\\\\\\*/
+.footbody2{
+    
+    text-decoration: none;
+}
+.footbody2  i{
+    font-size: 40px;
+    padding: 5px 7px;
+    margin: 10px 10px 10px 20px;
+    border-radius: 30%;
+}
+.footbody2 {
+    color: #fff;
+}
+.footbody2  i:hover{
+    background-image: linear-gradient(to bottom right ,rgb(249, 39, 112),rgb(240, 110, 132),red, orange,yellow);
+    transform: scale(1.2);
+    color: rgb(63, 23, 23);
+
+}
+        /*////////GEMAIL\\\\\\\\\\*/
+
+
+.footbody3 {
+    color: #fff;
+    text-decoration: none;
+   
+}
+.footbody3  i{
+    font-size: 40px;
+    padding: 5px 7px;
+    margin: 10px 10px 10px 20px;
+    border-radius: 30%;
+}
+.footbody3  i:hover{
+    transform: scale(1.2);
+    color: rgb(63, 23, 23);
+    background-color: #fff;
+}
+.footer {
+    background-image: url('logo.jpg');
+    background-position: center ;
+    background-size: 70%;
+    color: white;
+    display: grid;
+    justify-items: center;
+    align-items: flex-end;
+    
+    padding: 10px 0;
+    width: 100%;
+    height: 595px;
+}
+.footer p{
+    justify-self: center;
+    align-self: flex-end;
+}
+@media screen and (max-width:900px){
+    body {
+        font-size: 100%;
+        color: #333;
+        margin: 0;
+        clear: both;
+        line-height: 1.5;
+        
+    }
+    .product {
+        border-radius: 4px;
+        flex-wrap: wrap;
+        display: flex;
+        width: 80%;
+        height: 80%;
+        justify-content: space-evenly;
+    }
+    .products {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .content {
+        padding: 20px;
+        background-position: center;
+        background-size: 10%;
+        width: 97,3%;
+    }
+    #li1, #li2, #li3 {
+        display: none;
+    }
+    .www{
+        display: block;
+    }
+    .logo { 
+        width: 70px; /* Adjust the size as needed */ 
+        height: 70px; /* Make height the same as width for a perfect circle */ 
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+        padding: 3rem 1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+        transition: 0.5s ease-in-out;
+        margin: 15px;
+
+        border-radius: 10px;}
+}
+@media screen and (max-width:888px){
+    #qwerty{
+        float: right;
+        clear: both;
+        position: absolute;
+        background-color: rgb(8, 153, 250);
+        width: 20%;
+        top: 30px;
+        left:600px;
+    }
+}
+@media screen and (max-width:860px){
+    
+    .card{
+        width: 270px;
+        height: 270px;
+        padding: 3rem 1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+        transition: 0.5s ease-in-out;
+        margin: 15px;
+
+        border-radius: 10px;
+    }
+    #qwerty{
+        float: right;
+        clear: both;
+        position: absolute;
+        background-color: rgb(8, 153, 250);
+        width: 20%;
+        top: 30px;
+        left:590px;
+    }
+    .footbody{
+        background-color: #333;
+        width: 25%;
+        position: relative;
+        left: 37.5%;
+    }
+    .footbody1  i{
+        font-size: 30px;
+        padding: 5px 7px;
+        margin: 10px;
+        border-radius: 30%;
+    }
+    .footbody2  i{
+        font-size: 30px;
+        padding: 5px 7px;
+        margin: 10px;
+        border-radius: 30%;
+    }
+    .footbody3  i{
+        font-size: 30px;
+        padding: 5px 7px;
+        margin: 10px;
+        border-radius: 30%;
+    }
+}
+@media screen and (max-width:790px){
+    #qwerty{
+        float: right;
+        clear: both;
+        position: absolute;
+        background-color: rgb(8, 153, 250);
+        width: 20%;
+        top: 30px;
+        left:500px;
+    }
+}
+
+@media screen and (max-width:707px){
+    .footbody1  i{
+        font-size: 20px;
+        padding: 5px 7px;
+        margin: 10px;
+        border-radius: 30%;
+    }
+    .footbody2  i{
+        font-size: 20px;
+        padding: 5px 7px;
+        margin: 10px;
+        border-radius: 30%;
+    }
+    .footbody3  i{
+        font-size: 20px;
+        padding: 5px 7px;
+        margin: 10px;
+        border-radius: 30%;
+    }
+    .card{
+        width: 220px;
+        height: 220px;
+        padding: 4rem 2rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+        transition: 0.5s ease-in-out;
+        margin: 15px;
+
+        border-radius: 10px;
+    }
+}
+@media screen and (max-width:675px){
+    .card{
+        width: 170px;
+        height: 170px;
+        padding: 4rem 2rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+        transition: 0.5s ease-in-out;
+        margin: 15px;
+
+        border-radius: 10px;
+    }
+
+}
